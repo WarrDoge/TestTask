@@ -4,4 +4,4 @@ RUN apt-get update && apt-get install -y python3 && apt-get install -y ansible
 VOLUME ./ansible:/ansible
 COPY ansible /ansible
 WORKDIR /ansible
-CMD ansible-playbook playbook.yml
+CMD ansible --version && ansible-playbook playbook.yml
