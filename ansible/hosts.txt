@@ -1,2 +1,2 @@
 [servers]
-aws  ansible_host=XXX  ansible_user=root  ansible_ssh_private_key=./ssh_key/ssh_key.txt
+aws  ansible_host=XXX  ansible_user=root  ansible_ssh_private_key=./ssh_key/rootkey.csv

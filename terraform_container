@@ -1,1 +1,7 @@
- 
+FROM ubuntu
+LABEL maintainer="warr.doge@gmail.com"
+RUN apt-get update && apt-get install -y wget && apt-get install -y zip
+VOLUME ./terraform:/terraform
+COPY terraform /terraform
+WORKDIR /terraform
+CMD wget https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && unzip terraform_0.15.0_linux_amd64.zip && rm terraform_0.15.0_linux_amd64.zip && mv terraform /bin/ && terraform --version
