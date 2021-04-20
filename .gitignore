@@ -1,2 +1,2 @@
-/ansible/ssh_key
-/terraform/ssh_key
+/ansible/ssh_key/ssh_key.txt
+/terraform/ssh_key/ssh_key.txt
