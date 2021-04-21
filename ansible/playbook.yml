@@ -14,7 +14,7 @@
     raw: apt -y install python3-pip   
 
   - name: Install the Docker package
-    raw: apt install docker.io
+    raw: apt -y install docker.io
 
   - name: Start Docker and enter the following command to enable it
     raw: systemctl enable --now docker
