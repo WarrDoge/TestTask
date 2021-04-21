@@ -1,8 +1,23 @@
 ---
 - name: Ansible Run
-  hosts: servers
+  hosts: all
   become: yes
 
   tasks:
-  - name: repo update
-    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+  - name: Repo update
+    raw: apt update && apt upgrade
+
+  - name: Install Python
+    raw: apt -y install python   
+
+  - name: Install pip
+    raw: apt -y install python3-pip   
+
+  - name: Install the Docker package
+    raw: apt install docker.io
+
+  - name: Start Docker and enter the following command to enable it
+    raw: systemctl enable --now docker
+
+  - name: Set user privileges
+    raw: usermod -aG docker ${USER}

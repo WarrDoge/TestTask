@@ -1,7 +1,7 @@
 FROM ubuntu
 LABEL maintainer="warr.doge@gmail.com"
 RUN apt-get update && apt-get install -y python3 && apt-get install -y ansible
-VOLUME ./ansible:/ansible
+VOLUME ./ansible
 COPY ansible /ansible
 WORKDIR /ansible
-CMD ansible --version && ansible-playbook playbook.yml
+CMD ansible-playbook playbook.yml
