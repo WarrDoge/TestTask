@@ -10,4 +10,4 @@ added aws keys and ssh_key to .gitignore
 
 Sometimes need to restart docker-compose after the first try to see phpinfo page
 
-p.s. healthcheck to delete default nginx page
+p.s. healthcheck to delete nginx default.conf
